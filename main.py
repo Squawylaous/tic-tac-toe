@@ -32,25 +32,25 @@ while ply=="Y" or play=="y":
     c=input("Do you want to play against another person? Y/N ")
     out(t3)
     while w==0:
-    if p==2: p=1
-    else: p=2
-    if c=="Y" or c=="y" or p==1: x=int(input("Player "+str(p)+"'s turn. Input 1-9 to play. "))
-    else: x=5
-    l=0
-    while t3[x-1]!=0:
+        if p==2: p=1
+        else: p=2
         if c=="Y" or c=="y" or p==1: x=int(input("Player "+str(p)+"'s turn. Input 1-9 to play. "))
-        else:
-            if l==0: x=1
-            elif l==1: x=9
-            elif l==2: x=3
-            elif l==3: x=5
-            elif l==4: x=2
-            elif l==5: x=8
-            elif l==6: x=4
-            elif l==7: x=6
-        l+=1
-    t3=turn(x,t3,p)
-    w=check(t3)
+        else: x=5
+        l=0
+        while t3[x-1]!=0:
+            if c=="Y" or c=="y" or p==1: x=int(input("Player "+str(p)+"'s turn. Input 1-9 to play. "))
+            else:
+                if l==0: x=1
+                elif l==1: x=9
+                elif l==2: x=3
+                elif l==3: x=5
+                elif l==4: x=2
+                elif l==5: x=8
+                elif l==6: x=4
+                elif l==7: x=6
+            l+=1
+        t3=turn(x,t3,p)
+        w=check(t3)
     if w==3: print("Tie!")
     else: print("Player",w,"wins! Congratulations!")
     play=input("Do you want to play again? (Y/N) ")
