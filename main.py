@@ -25,7 +25,7 @@ def turn(x,t3,p):
 #───┼───┼───
 # X │ X │ X
 play="y"
-while ply=="Y" or play=="y":
+while play=="Y" or play=="y":
     t3=[0,0,0,0,0,0,0,0,0]
     w=0
     p=2
