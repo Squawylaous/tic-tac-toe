@@ -9,9 +9,9 @@ def check(t3):
     for i in range(9):
         if t3[i]!=0: x+=1
     if x<5: y=0
-    elif (t3[4]==(t3[0] and t3[8])or t3[4]==(t3[2] and t3[6])or t3[4]==(t3[1] and t3[7])or t3[4]==(t3[3] and t3[5])) and t3[4]!=0: y=t3[4]
-    elif t3[1]==(t3[0] and t3[2]) or t3[3]==(t3[6] and t3[0]) and t3[0]!=0: y=t3[0]
-    elif t3[7]==(t3[6] and t3[8]) or t3[5]==(t3[2] and t3[8]) and t3[8]!=0: y=t3[8]
+    elif ((t3[4]==t3[0] and t3[4]==t3[8]) or (t3[4]==t3[2] and t3[4]==t3[6]) or (t3[4]==t3[1] and t3[4]==t3[7]) or (t3[4]==t3[3] and t3[4]==t3[5])) and t3[4]!=0: y=t3[4]
+    elif (t3[1]==t3[0] and t3[1]==t3[2]) or (t3[3]==t3[6] and t3[3]==t3[0]) and t3[0]!=0: y=t3[0]
+    elif (t3[7]==t3[6] and t3[7]==t3[8]) or (t3[5]==t3[2] and t3[5]==t3[8]) and t3[8]!=0: y=t3[8]
     elif x==9: y=3
     else: y=0
     return y
@@ -38,7 +38,7 @@ while play=="Y" or play=="y":
         else: x=5
         l=0
         while t3[x-1]!=0:
-            if c=="Y" or c=="y" or p==1: x=int(input("Player "+str(p)+"'s turn. Input 1-9 to play. "))
+            if c=="Y" or c=="y" or p==1: x=int(input("That space is taken. turn. Input 1-9 to play. "))
             else:
                 if l==0: x=1
                 elif l==1: x=9
